@@ -1,16 +1,56 @@
 header{
-    display:flex;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    justify-content: center;
-    padding: 3px;
-    background-color: rgb(182, 148, 213);
-    width: fit-content;
-    @media(min-width: 300px){
-        width: 300px;
+    background-color: #F0EFE9;
+    padding: 15px;
+    display: flex;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        
+        .menu{
+            display: none;
+            font-size: 25px;
+
+            @media(min-width: 992px){
+                display: block;
+            }
+
+            .topmenu{
+                display: flex;
+                flex:1;
+                justify-content: space-between;
+
+                /*ta bort senare(felsök)*/
+                border: 2px solid black;
+            }
+        }
+
+        .menu-bars{
+            border: none;
+            background-color: transparent;
+
+            @media(min-width: 992px){
+                display: none;
+            }
+        }
+    
+    @media(min-width: 2500px){
+        width: 2048px;
     }
-    @media(min-width: 600px){
-        width: 500px;
+}
+}
+
+
+
+
+
+/*TA BORT SENARE: testdesign härifrån*/
+section{
+    @media(max-width: 300px){
+        width: 300px;
+        background-color:darkkhaki;
+        font-size: xx-large;
     }
 }
