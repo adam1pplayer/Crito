@@ -1,56 +1,137 @@
-header{
-    background-color: #F0EFE9;
-    padding: 15px;
-    display: flex;
-
-    .container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
-        
-        .menu{
-            display: none;
-            font-size: 25px;
-
-            @media(min-width: 992px){
-                display: block;
-            }
-
-            .topmenu{
-                display: flex;
-                flex:1;
-                justify-content: space-between;
-
-                /*ta bort senare(felsök)*/
-                border: 2px solid black;
-            }
-        }
-
-        .menu-bars{
-            border: none;
-            background-color: transparent;
-
-            @media(min-width: 992px){
-                display: none;
-            }
-        }
-    
-    @media(min-width: 2500px){
-        width: 2048px;
-    }
-}
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
+html, body {
+  color: #191919;
+  font-size: 16px;
+  font-weight: 400;
 }
 
+.btn-yellow {
+  background-color: #F9D783;
+  border: solid 1px #F9D783;
+  text-decoration: none;
+  color: #191919;
+  padding: 8px 25px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+}
+.btn-yellow i {
+  margin-left: 8px;
+  font-size: 0.85em;
+}
+.btn-yellow:hover {
+  background-color: #191919;
+  border: #191919 1px solid;
+  color: #f4f4f4;
+}
 
-
-
+header {
+  background-color: #F0EFE9;
+  padding: 16px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+header .container .menu-bars {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+}
+@media (min-width: 1280px) {
+  header .container .menu-bars {
+    display: none;
+  }
+}
+header .container .menu {
+  display: none;
+  flex: 1;
+  font-size: 15px;
+}
+@media (min-width: 1280px) {
+  header .container .menu {
+    display: block;
+  }
+}
+header .container .menu .topmenu {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid #DAD9D3 1px;
+  padding-bottom: 10px;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+@media (max-width: 1279px) {
+  header .container .menu .topmenu {
+    display: none;
+  }
+}
+header .container .menu .topmenu .contact-information {
+  display: flex;
+  align-items: center;
+}
+header .container .menu .topmenu .contact-information .content-box {
+  margin-right: 30px;
+  padding-right: 30px;
+  border-right: solid #DAD9D3 1px;
+  font-weight: 300;
+}
+header .container .menu .topmenu .contact-information .content-box i {
+  margin-right: 5px;
+  font-size: 1.2em;
+  color: #666666;
+}
+header .container .menu .topmenu .contact-information .content-box.last {
+  border: none;
+}
+header .container .menu .topmenu .social-media a {
+  font-size: 1rem;
+  color: #191919;
+  margin-left: 10px;
+}
+header .container .menu .topmenu .social-media a:hover {
+  color: #404040;
+}
+header .container .menu .main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header .container .menu .main-menu nav a {
+  display: inline-block;
+  color: #191919;
+  text-decoration: none;
+  margin-right: 35px;
+  position: relative;
+}
+header .container .menu .main-menu nav a.active {
+  font-weight: 500;
+}
+header .container .menu .main-menu nav a.active::after, header .container .menu .main-menu nav a:hover::after {
+  content: "";
+  position: absolute;
+  font-weight: 500;
+  height: 2px;
+  width: 15px;
+  background-color: #191919;
+  left: 50%;
+  bottom: -3px;
+  transform: translate(calc(50% - 15px));
+}
+@media (min-width: 2500px) {
+  header .container {
+    width: 2048px;
+  }
+}
 
 /*TA BORT SENARE: testdesign härifrån*/
-section{
-    @media(max-width: 300px){
-        width: 300px;
-        background-color:darkkhaki;
-        font-size: xx-large;
-    }
+@media (max-width: 300px) {
+  section {
+    width: 300px;
+    background-color: darkkhaki;
+    font-size: xx-large;
+  }
 }
