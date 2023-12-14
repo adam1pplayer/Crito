@@ -4,6 +4,7 @@ html, body {
   color: #191919;
   font-size: 16px;
   font-weight: 400;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
 }
 
@@ -25,6 +26,26 @@ html, body {
   background-color: #191919;
   border: #191919 1px solid;
   color: #f4f4f4;
+}
+
+.btn-black {
+  background-color: #191919;
+  border: solid 1px #191919;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+}
+.btn-black i {
+  margin-left: 8px;
+  font-size: 0.85em;
+}
+.btn-black:hover {
+  background-color: #FFFFFF;
+  border: #191919 1px solid;
+  color: #191919;
 }
 
 .btn-trans {
@@ -60,6 +81,12 @@ html, body {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 45px;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #header1 {
@@ -210,4 +237,49 @@ header .container .menu .main-menu .btn-login {
 
 .project-and-case .container .section-title {
   text-align: center;
+}
+.project-and-case .container .project-and-cases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.project-and-case .container .project-and-cases .project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  color: #191919;
+  text-decoration: none;
+}
+.project-and-case .container .project-and-cases .project img {
+  width: 100%;
+  height: auto;
+}
+.project-and-case .container .project-and-cases .project h3 {
+  padding-top: 35px;
+  padding-bottom: 16px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  border-bottom: solid 1px #DAD9D3;
+}
+.project-and-case .container .project-and-cases .project .readmore {
+  padding: 15px;
+  margin-right: 15px;
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  color: #191919;
+}
+.project-and-case .container .project-and-cases .project .readmore i {
+  margin-left: 3px;
+}
+.project-and-case .container .project-and-cases .project:hover .readmore {
+  text-decoration: underline;
+}
+.project-and-case .container .project-and-cases .center-content {
+  margin-top: 50px;
+  margin-bottom: 90px;
 }
